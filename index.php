@@ -42,7 +42,9 @@
                 <label>Fecha</label>
                 <input type="date" class="form-control">
             </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+        <button class="btn btn-info" style="color: white">Ver noticias</button>
     </div>
 </body>
 </html>

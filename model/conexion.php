@@ -3,10 +3,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$basedatos = "";
+$basedatos = "laboratorio3tw";
 
 //Creamos la conexion
-$conexion = new mysqli($servername, $username, $password, $basedato);
+$conexion = new mysqli($servername, $username, $password, $basedatos);
 
 //verificamos la conexion
 if ($conexion->connect_error){
