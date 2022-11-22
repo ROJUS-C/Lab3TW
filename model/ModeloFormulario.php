@@ -8,8 +8,7 @@ class ModeloNoticias extends MSQ
         parent::__construct();
     }
 
-    public function addNoticia($array){
-        $sql = 'insert into noticia';
+    public function addNoticia($array = []){
     }
 }
 ?> 

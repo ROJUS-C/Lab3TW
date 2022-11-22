@@ -15,7 +15,7 @@
     <?php include_once 'vista/componentes/header.php' ?>
     <main>
         <div class="container">
-            <form action="<?php echo constant('URL')?>/formulario/agregar" method="POST">
+            <form action="<?php echo constant('URL')?>formulario/agregar" method="POST">
                 <div class="form-group">
                     <label>Titulo</label>
                     <input type="text" class="form-control" placeholder="Titulo" name="titulo">
