@@ -8,12 +8,14 @@ class ControllerNoticia extends Vista{
     }
 
     public function render(){
-        $this->vista('noticias', []);
+        require_once 'model/ModeloNoticias.php';
+        $noticia = new ModeloNoticias();
+        $res =  $noticia->mostratNoticia();
+        $this->vista('noticias', $res);
     }
 
     public function modificar (){
-        
-        $this->vista('midificar', []);
+        $this->vista('modificar', []);
     }
 }
 

@@ -22,22 +22,25 @@
                 </div>
                 <div class="card-body d-flex flex-wrap">
                     <!-- Noticia -->
-                    <div class="card col-4">
-                        <img src="../img/<?php  ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php ?></h5>
-                            <h6 class="card-text text-secondary"><?php  ?></h6>
-                            <p class="card-text"><?php ?></p>
-                            <div class="card-btn">
-                                <a href="#" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-warning">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
+                    <?php foreach ($this->array as $value) { ?>
+                        <div class="card col-4 mx-3">
+                            <img src="<?php echo constant('URL') ?>img/<?php echo $value['imagen'] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $value['titulo'] ?></h5>
+                                <h6 class="card-text text-secondary"><?php echo $value['categoria'] ?></h6>
+                                <p class="card-text"><?php echo $value['resumen'] ?></p>
+                                <div class="card-btn">
+                                    <a class="btn btn-primary">Ver</a>
+                                    <a href="<?php echo constant('URL') ?>noticia/modificar" class="btn btn-warning">Editar</a>
+                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                </div>
                             </div>
+                            <div class="card-footer">
+                                <small class="text-muted"><?php  ?></small>
+                            </div>
+
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted"><?php  ?></small>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
