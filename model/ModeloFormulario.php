@@ -9,6 +9,8 @@ class ModeloNoticias extends MSQ
     }
 
     public function addNoticia($array = []){
+        
     }
+
 }
 ?> 
