@@ -1,6 +1,6 @@
 <?php
 require_once 'model/conexion.php';
-class ModeloNoticias extends MSQ
+class ModeloFormulario extends MSQ
 {
 
     public function __construct()

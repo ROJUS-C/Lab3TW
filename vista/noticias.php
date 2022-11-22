@@ -30,9 +30,9 @@
                                 <h6 class="card-text text-secondary"><?php echo $value['categoria'] ?></h6>
                                 <p class="card-text"><?php echo $value['resumen'] ?></p>
                                 <div class="card-btn">
-                                    <a class="btn btn-primary">Ver</a>
-                                    <a href="<?php echo constant('URL') ?>noticia/modificar" class="btn btn-warning">Editar</a>
-                                    <a href="#" class="btn btn-danger">Eliminar</a>
+                                    <a href='<?php echo constant('URL') ?>noticia/ver?id=<?php echo $value['noticia_id'] ?>' class="btn btn-primary">Ver</a>
+                                    <a href="<?php echo constant('URL') ?>noticia/modificar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-warning">Editar</a>
+                                    <a href="<?php echo constant('URL') ?>noticia/eliminar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-danger">Eliminar</a>
                                 </div>
                             </div>
                             <div class="card-footer">

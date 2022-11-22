@@ -17,6 +17,15 @@ class ControllerNoticia extends Vista{
     public function modificar (){
         $this->vista('modificar', []);
     }
+
+    public function ver()
+    {
+        $this->vista('ver-noticia', []);
+    }
+    public function eliminar()
+    {
+        $this->vista('eliminar', []);
+    }
 }
 
 ?>
