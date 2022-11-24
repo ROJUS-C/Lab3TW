@@ -66,9 +66,17 @@ class ControllerNoticia extends Vista{
         header('Location:' . constant('URL') . 'noticia');
     }
 
-    public function ver()
+    public function vistaVer()
     {
-        $this->vista('ver-noticia', []);
+        if(!isset($_GET['id'])){
+            header('Location:' . constant('URL') . 'noticia');        
+        }
+        $id = $_GET['id'];
+        require_once 'model/ModeloNoticias.php';
+        $noticia = new ModeloNoticias();
+        $res = $noticia->verNoticia($id);
+        $this->vista('ver-noticia',$res);
+        
     }
     public function eliminar()
     {
