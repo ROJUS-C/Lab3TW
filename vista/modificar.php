@@ -56,7 +56,10 @@
                                 <label>Fecha</label>
                                 <input type="date" value="<?php echo $value['fecha']; ?>" class="form-control" name="fecha">
                             </div>
-                            <button name="btn" class="btn btn-primary">Enviar</button>
+                            <div class="d-flex py-3 gap-3">
+                                <button name="btn" class="btn btn-primary">Enviar</button>
+                                <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Volver</a>
+                            </div>
                         </form>
                     <?php } ?>
                 </div>
@@ -64,10 +67,10 @@
         </div>
     </div>
 </body>
+
 </html>
 
-<?php if(isset($_POST['btn']) ) {
+<?php if (isset($_POST['btn'])) {
     echo 'holaaaa';
-}   
+}
 ?>
-
