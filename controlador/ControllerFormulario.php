@@ -20,7 +20,7 @@ class ControllerFormulario extends Vista{
         $fecha = $_POST['fecha'];
         require_once ('model/ModeloFormulario.php');
         $clase = new ModeloFormulario();
-        $clase->agregarNoticia($titulo, $img, $categoria, $resumen, $noticia, $fecha);
+        $clase->agregarNoticia($titulo, $img, $resumen, $categoria, $noticia, $fecha);
         $this->vista('formulario', ['mensaje'=>'La noticia fue agregada exitosamente']);
     }
 }

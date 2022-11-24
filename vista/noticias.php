@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><?php  ?></small>
+                                <small class="text-muted"><?php echo $value['fecha'] ?></small>
                             </div>
 
                         </div>

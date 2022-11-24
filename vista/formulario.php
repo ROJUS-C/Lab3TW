@@ -41,7 +41,7 @@
                                 <option value="Nacional">Nacional</option>
                                 <option value="Mundial">Mundial</option>
                                 <option value="Deporte">Deporte</option>
-                                <option value="Categoria 4">Categoria 4</option>
+                                <option value="Politica">Politica</option>
                             </select>
                         </div>
                         <div class="form-group">

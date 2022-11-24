@@ -42,10 +42,10 @@
                                 <label>Categoria</label>
                                 <select class="form-control" name="categoria">
                                     <option selected><?php echo $value['categoria']; ?></option>
-                                    <option value="1">Categoria 1</option>
-                                    <option value="2">Categoria 2</option>
-                                    <option value="3">Categoria 3</option>
-                                    <option value="4">Categoria 4</option>
+                                    <option value="Mundial">Mundial</option>
+                                    <option value="Nacional">Nacional</option>
+                                    <option value="Deporte">Deporte</option>
+                                    <option value="Politica">Politica</option>
                                 </select>
                             </div>
                             <div class="form-group">
