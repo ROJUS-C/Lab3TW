@@ -82,5 +82,7 @@ class ControllerNoticia extends Vista{
         header('Location:' . constant('URL') . 'noticia?eliminado=1');
 
     }
+
+
 }
 ?>

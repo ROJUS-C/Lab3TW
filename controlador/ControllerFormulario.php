@@ -11,7 +11,7 @@ class ControllerFormulario extends Vista{
         $this->vista('formulario', []);
     }
 
-    public function agregar(){
+    public function agregarNoticia(){
         $titulo = $_POST['titulo'];
         $img = $_POST['img'];
         $categoria = $_POST['categoria'];
@@ -19,5 +19,8 @@ class ControllerFormulario extends Vista{
         $noticia = $_POST['noticia'];
         $fecha = $_POST['fecha'];
         require_once ('model/ModeloFormulario.php');
+        $clase = new ModeloFormulario();
+        $clase->agregarNoticia($titulo, $img, $categoria, $resumen, $noticia, $fecha);
+        $this->vista('formulario', ['mensaje'=>'La noticia fue agregada exitosamente']);
     }
 }
