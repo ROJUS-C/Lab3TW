@@ -15,7 +15,7 @@
     <?php include_once 'vista/componentes/header.php' ?>
     <main>
         <div class="container">
-            <form action="<?php echo constant('URL')?>formulario/agregar" method="POST">
+            <form action="<?php echo constant('URL') ?>formulario/agregar" method="POST">
                 <div class="form-group">
                     <label>Titulo</label>
                     <input type="text" class="form-control" placeholder="Titulo" name="titulo">
@@ -46,9 +46,11 @@
                     <label>Fecha</label>
                     <input type="date" class="form-control" name="fecha">
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="d-flex py-3 gap-3">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Ver noticias</a>
+                </div>
             </form>
-            <a class="btn btn-info" style="color: white">Ver noticias</a>
         </div>
     </main>
 </body>

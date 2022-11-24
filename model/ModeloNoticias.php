@@ -19,17 +19,26 @@ class ModeloNoticias extends MSQ {
     }
 
     public function eliminarNoticia($id){
-        $sql = 'DELETE noticia WHERE noticia_id = '.$id.'';
+        $sql = "DELETE FROM  noticia WHERE noticia_id = '$id'";
         try {
-            $res =  $this->query($sql);
+           $res =  $this->query($sql);
             return true;
         } catch (\Throwable $th) {
             return false;
         }
     }
 
+    public function update($id, $name,$value){
+        $sql = "update noticia set `$name` = '$value' where noticia_id = '$id'";
+        try {
+            $this->query($sql);
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
     public function verNoticia($id){
-        $sql = 'SELECT titulo, imagen, resumen, categoria, fecha FROM noticia WHERE noticia_id = ' . $id . '';
+        $sql = 'SELECT noticia_id, titulo, imagen, resumen, categoria, fecha, noticia FROM noticia WHERE noticia_id = '.$id.'';
         try {
             $res =  $this->query($sql);
             return $res;

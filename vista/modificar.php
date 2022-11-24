@@ -20,31 +20,54 @@
                 <div class="card-header">
                     Modificar
                 </div>
-                <div class="card-body d-flex flex-wrap">
-                    <!-- Noticia -->
-                    <?php foreach ($this->array as $value) { ?>
-                        <div class="card col-4 mx-3">
-                            <img src="<?php echo constant('URL') ?>img/<?php echo $value['imagen'] ?>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $value['titulo'] ?></h5>
-                                <h6 class="card-text text-secondary"><?php echo $value['categoria'] ?></h6>
-                                <p class="card-text"><?php echo $value['resumen'] ?></p>
-                                <div class="card-btn">
-                                    <a href="<?php echo constant('URL') ?>noticia/ver" class="btn btn-primary">Ver</a>
-                                    <a href="<?php echo constant('URL') ?>noticia/modificar" class="btn btn-warning">Editar</a>
-                                    <a href="<?php echo constant('URL') ?>noticia/eliminar" class="btn btn-danger">Eliminar</a>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted"><?php  ?></small>
-                            </div>
+                <div class="container">
+                    <!-- Formulario para modificar-->
+                    <?php foreach ($this->array as $key => $value) {
 
-                        </div>
+                    ?>
+                        <form action="<?php echo constant('URL') ?>noticia/modificar?id=<?php echo $value['noticia_id'] ?>" method="POST">
+                            <div class="form-group">
+                                <label>Titulo</label>
+                                <input type="text" class="form-control" value="<?php echo $value['titulo']; ?>" name="titulo">
+                            </div>
+                            <div class="form-group">
+                                <label>Imagen</label>
+                                <input type="file" class="form-control" name="imagen">
+                            </div>
+                            <div class="form-group">
+                                <label>Resumen</label>
+                                <textarea class="form-control" name="resumen"><?php echo $value['resumen']; ?></textarea>
+                            </div>
+                            <div class="from-group">
+                                <label>Categoria</label>
+                                <select class="form-control" name="categoria">
+                                    <option selected><?php echo $value['categoria']; ?></option>
+                                    <option value="1">Categoria 1</option>
+                                    <option value="2">Categoria 2</option>
+                                    <option value="3">Categoria 3</option>
+                                    <option value="4">Categoria 4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Noticia</label>
+                                <textarea class="form-control" name="noticia"><?php echo $value['noticia']; ?></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Fecha</label>
+                                <input type="date" value="<?php echo $value['fecha']; ?>" class="form-control" name="fecha">
+                            </div>
+                            <button name="btn" class="btn btn-primary">Enviar</button>
+                        </form>
                     <?php } ?>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>
+
+<?php if(isset($_POST['btn']) ) {
+    echo 'holaaaa';
+}   
+?>
+

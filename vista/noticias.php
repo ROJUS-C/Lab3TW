@@ -18,9 +18,16 @@
             <!-- Tablero de Noticia -->
             <div class="card p-0">
                 <div class="card-header">
-                    Tablero de Noticias
+                    <h4>Tablero de Noticias</h4>
+                    <?php if (isset($_GET['eliminado'])) { ?>
+                        <!-- Componente para Alertar si se elimina una noticia-->
+                        <div class="alert alert-success d-flex justify-content-center" role="alert">
+                            Eliminado
+                        </div>
+                    <?php } ?>
                 </div>
-                <div class="card-body d-flex flex-wrap">
+                <!--Componente targeta, es para mostrar las noticias-->
+                <div class="card-body  d-flex flex-wrap justify-content-center ">
                     <!-- Noticia -->
                     <?php foreach ($this->array as $value) { ?>
                         <div class="card col-4 mx-3">
@@ -30,8 +37,8 @@
                                 <h6 class="card-text text-secondary"><?php echo $value['categoria'] ?></h6>
                                 <p class="card-text"><?php echo $value['resumen'] ?></p>
                                 <div class="card-btn">
-                                    <a href='<?php echo constant('URL') ?>noticia/ver?id=<?php echo $value['noticia_id'] ?>' class="btn btn-primary">Ver</a>
-                                    <a href="<?php echo constant('URL') ?>noticia/modificar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-warning">Editar</a>
+                                    <a href='<?php echo constant('URL') ?>noticia/vistaVer?id=<?php echo $value['noticia_id'] ?>' class="btn btn-primary">Ver</a>
+                                    <a href="<?php echo constant('URL') ?>noticia/vistaModificar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-warning">Editar</a>
                                     <a href="<?php echo constant('URL') ?>noticia/eliminar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-danger">Eliminar</a>
                                 </div>
                             </div>
