@@ -1,6 +1,6 @@
 <?php
 require_once 'model/conexion.php';
-class ModeloNoticias extends MSQ
+class ModeloFormulario extends MSQ
 {
 
     public function __construct()
@@ -8,8 +8,17 @@ class ModeloNoticias extends MSQ
         parent::__construct();
     }
 
-    public function addNoticia($array = []){
-        
+    public function agregarNoticia($titulo, $img, $resumen, $categoria, $noticia, $fecha){
+        $sql = "INSERT noticia VALUES(
+            NUll,
+            '".$titulo."',
+            '".$img."',
+            '".$resumen."',
+            '".$categoria."',
+            '".$noticia."',
+            '".$fecha."'
+        )";
+        $this->query($sql);
     }
 
 }

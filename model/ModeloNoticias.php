@@ -9,7 +9,6 @@ class ModeloNoticias extends MSQ {
 
     public function mostratNoticia(){
         $sql = 'SELECT titulo, imagen, resumen, categoria, fecha FROM noticia';
-
         $res =  $this->query($sql);
         return $res;
     }

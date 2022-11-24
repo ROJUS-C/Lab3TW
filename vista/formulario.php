@@ -1,3 +1,5 @@
+
+
 <!-- Formulario para insertar una noticia -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +16,12 @@
 <body>
     <?php include_once 'vista/componentes/header.php' ?>
     <main>
-        <div class="container">
-            <form action="<?php echo constant('URL')?>formulario/agregar" method="POST">
+        <div class="container mt-3">
+            <h2>Agregar Noticia</h2>
+            <div class="alert alert-success">
+                Hola mundo
+            </div>
+            <form action="<?php echo constant('URL')?>formulario/agregarNoticia" method="POST">
                 <div class="form-group">
                     <label>Titulo</label>
                     <input type="text" class="form-control" placeholder="Titulo" name="titulo">
@@ -32,10 +38,10 @@
                     <label>Categoria</label>
                     <select class="form-control" name="categoria">
                         <option selected>Selecciona una opcion...</option>
-                        <option value="1">Categoria 1</option>
-                        <option value="2">Categoria 2</option>
-                        <option value="3">Categoria 3</option>
-                        <option value="4">Categoria 4</option>
+                        <option value="Nacional">Nacional</option>
+                        <option value="Mundial">Mundial</option>
+                        <option value="Deporte">Deporte</option>
+                        <option value="Categoria 4">Categoria 4</option>
                     </select>
                 </div>
                 <div class="form-group">

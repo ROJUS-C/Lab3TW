@@ -15,8 +15,11 @@ class ControllerNoticia extends Vista{
     }
 
     public function modificar (){
-        $this->vista('modificar', []);
+    
+        $this->vista('midificar', []);
     }
+
+
 }
 
 ?>
