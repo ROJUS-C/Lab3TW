@@ -26,14 +26,14 @@
                                 <p class="card-text"><?php echo $value['noticia'] ?></p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><?php  ?></small>
+                                <small class="text-muted"><?php echo 'Fecha: '.$value['fecha'] ?></small>
                             </div>
                         </div>
                     <?php } ?>
                 </div>
             </div>
         </div>
-        <a class="btn btn-info" style="color: white">Volver</a>
+        <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Volver</a>
     </div>
 </body>
 

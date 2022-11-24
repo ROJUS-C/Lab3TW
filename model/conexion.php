@@ -1,8 +1,8 @@
 <?php
 class MSQ {
     private $servername = "localhost";
-    private $username = "rodrigosc";
-    private $password = "rodrigosc";
+    private $username = "root";
+    private $password = "";
     private $basedatos = "laboratorio3tw";
     private $conexion;
     public function __construct()

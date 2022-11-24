@@ -13,7 +13,7 @@ class ControllerFormulario extends Vista{
 
     public function agregarNoticia(){
         $titulo = $_POST['titulo'];
-        $img = $_POST['img'];
+        $img = $_POST['imagen'];
         $categoria = $_POST['categoria'];
         $resumen = $_POST['resumen'];
         $noticia = $_POST['noticia'];
