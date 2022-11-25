@@ -41,7 +41,7 @@
                         <div class="from-group">
                             <label>Categoria</label>
                             <select class="form-control" name="categoria">
-                                <option selected>Selecciona una opcion...</option>
+                                <option value="" selected>Selecciona una opcion...</option>
                                 <option value="Nacional">Nacional</option>
                                 <option value="Mundial">Mundial</option>
                                 <option value="Deporte">Deporte</option>
