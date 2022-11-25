@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><?php echo $value['fecha'] ?></small>
+                                <small class="text-muted"><?php  ?></small>
                             </div>
 
                         </div>
