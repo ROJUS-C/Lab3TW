@@ -1,4 +1,3 @@
-const validarEditar = document.getElementsByTagName('update');
 const validarEliminar = document.querySelectorAll('#action');
 const cerrar = document.getElementById('cerrar');
 const cancelar = document.getElementById('cancelar');
@@ -24,6 +23,13 @@ const validar = (e) => {
         title.innerText = 'Modificar';
         p.innerText = '¿Esta seguro que quiere modificar?';
         link.innerText = 'Modificar';
+        modal.classList.toggle('displayR');
+    }
+    if (e.target.name === 'add') {
+        e.preventDefault();
+        title.innerText = 'Agregar';
+        p.innerText = '¿Esta seguro que de agregar la noticia?';
+        link.innerText = 'Agregar';
         modal.classList.toggle('displayR');
     }
 
