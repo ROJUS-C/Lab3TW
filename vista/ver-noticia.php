@@ -14,6 +14,7 @@
     <?php include_once 'vista/componentes/header.php' ?>
     <div class="container">
         <div class="row">
+            <!--Componente card-->
             <div class="card p-0">
                 <div class="card-body d-flex justify-content-center">
                     <!-- Noticia -->
@@ -26,14 +27,14 @@
                                 <p class="card-text"><?php echo $value['noticia'] ?></p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><?php echo 'Fecha: '.$value['fecha'] ?></small>
+                                <small class="text-muted"><?php echo 'Fecha: ' . $value['fecha'] ?></small>
                             </div>
+                            <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Volver</a>
                         </div>
                     <?php } ?>
                 </div>
             </div>
         </div>
-        <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Volver</a>
     </div>
 </body>
 

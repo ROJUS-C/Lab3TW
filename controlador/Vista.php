@@ -2,6 +2,7 @@
 
 class Vista {
     private $array;
+    private $id;
     public function __construct()
     {
         
