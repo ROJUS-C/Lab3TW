@@ -15,13 +15,9 @@
     <?php include_once 'vista/componentes/header.php' ?>
     <main>
         <div class="container">
-            <form action="<?php echo constant('URL') ?>formulario/agregarNoticia" method="POST">
-                <div class="container mt-3">
+                <div id="contenedor-form" class="container mt-3">
                     <h2>Agregar Noticia</h2>
-                    <div class="alert alert-success">
-                        Hola mundo
-                    </div>
-                    <form action="<?php echo constant('URL') ?>formulario/agregarNoticia" method="POST">
+                    <form action="<?php echo constant('URL') ?>formulario/agregarNoticia" method="POST" onsubmit="return validarFormulario();">
                         <div class="form-group">
                             <label>Titulo</label>
                             <input type="text" class="form-control" placeholder="Titulo" name="titulo">
@@ -37,7 +33,7 @@
                         <div class="from-group">
                             <label>Categoria</label>
                             <select class="form-control" name="categoria">
-                                <option selected>Selecciona una opcion...</option>
+                                <option value="" selected>Selecciona una opcion...</option>
                                 <option value="Nacional">Nacional</option>
                                 <option value="Mundial">Mundial</option>
                                 <option value="Deporte">Deporte</option>
@@ -53,12 +49,13 @@
                             <input type="date" class="form-control" name="fecha">
                         </div>
                         <div class="d-flex py-3 gap-3">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button id="btn-enviarForm" type="submit" class="btn btn-primary">Enviar</button>
                             <a class="btn btn-info" href="<?php echo constant('URL') ?>noticia" style="color: white">Ver noticias</a>
                         </div>
                     </form>
                 </div>
-    </main>
+    </main> 
+    <script src="<?php echo constant('URL') ?>libs/js/formulario.js"></script>
 </body>
 
 </html>

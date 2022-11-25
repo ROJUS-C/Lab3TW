@@ -40,14 +40,14 @@
                                 <h6 class="card-text text-secondary"><?php echo $value['categoria'] ?></h6>
                                 <p class="card-text"><?php echo $value['resumen'] ?></p>
                                 <div class="card-btn" id="action">
-                                    <a href='<?php echo constant('URL') ?>noticia/vistaVer?id=<?php echo $value['noticia_id'] ?>' class="btn btn-primary">Ver</a>
-                                    <a href="<?php echo constant('URL') ?>noticia/vistaModificar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-warning">Editar</a>
+                                    <a href='<?php echo constant('URL') ?>noticia/vistaVer?id=<?php echo $value['noticia_id'] ?>' class="btn btn-primary">Ver <i class="bi bi-eye-fill"></i></a>
+                                    <a href="<?php echo constant('URL') ?>noticia/vistaModificar?id=<?php echo $value['noticia_id'] ?>" class="btn btn-warning">Editar <i class="bi bi-pencil-fill"></i></a>
                                     <!--Componente boton-->
-                                    <button class="btn btn-danger" name="delete" id="<?php echo $value['noticia_id']; ?>">Eliminar</button>
+                                    <button class="btn btn-danger" name="delete" id="<?php echo $value['noticia_id']; ?>">Eliminar <i class="bi bi-trash-fill"></i></button>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><?php  ?></small>
+                                <small class="text-muted"><?php echo $value['fecha']; ?></small>
                             </div>
 
                         </div>
