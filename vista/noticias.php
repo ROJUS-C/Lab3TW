@@ -16,7 +16,6 @@
 <body>
     <?php include_once 'vista/componentes/header.php' ?>
     <div class="container">
-        <div class="row">
             <?php include_once 'vista/componentes/modal.php'; ?>
             <!-- Tablero de Noticia -->
             <div class="card p-0">
@@ -30,11 +29,11 @@
                     <?php } ?>
                 </div>
                 <!--Componente targeta, es para mostrar las noticias-->
-                <div class="card-body  d-flex flex-wrap justify-content-center ">
+                <div class="card-body  row d-flex flex-wrap justify-content-center ">
                     <!-- Noticia -->
                     <?php
                     foreach ($this->array as $value) { ?>
-                        <div class="card col-4 mx-3">
+                        <div class="card col-12 m-3 col-lg-6 col-xl-4">
                             <img src="<?php echo constant('URL') ?>img/<?php echo $value['imagen'] ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $value['titulo'] ?></h5>
@@ -55,7 +54,6 @@
                     <?php } ?>
                 </div>
             </div>
-        </div>
     </div>
 
     <script src="<?php echo constant('URL') ?>public/js/validaciones.js"></script>
